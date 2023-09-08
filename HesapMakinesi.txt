@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+int main(){
+
+int sistem=1;                // sistemi baslatmak veya sonlandırmak icin
+float sayi1,sayi2=1;        // islemde kullanılacak sayilar 
+char secim;                // "+ - / *" gibi matematiksel sembolleri tutmak icin 
+
+printf("***HESAP MAKINESI***\n"); //Baslık 
+
+while(sistem==1){
+    printf("İsleminizi giriniz  ör (2+6) \n ");
+    scanf("%f",&sayi1);
+   
+    scanf("%c",&secim);
+  
+    scanf("%f",&sayi2);
+    
+    
+switch(secim){
+    case '+':printf("%f+%f=%.2f\n\n",sayi1,sayi2,sayi1+sayi2);
+        break;
+
+    case '-':printf("%f-%f=%.2f\n\n",sayi1,sayi2,sayi1-sayi2);
+        break;        
+    
+    case '*':printf("%f*%f=%.2f\n\n",sayi1,sayi2,sayi1*sayi2);
+        break;        
+    
+    case '/':printf("%f/%f=%.2f\n\n",sayi1,sayi2,sayi1/sayi2);
+        break;    
+        
+    default: printf("Yanlis secim");
+        break;
+        
+        
+        
+}
+
+printf("devam etmek icin 1 , Cıkmak icin 0 tusuna basın ");
+scanf("%d",&sistem);
+
+    if(sistem==0){
+        
+        printf("Sistemden Cikis Yapildi Tesekkürler");
+        
+    }   
+    
+}
+}
